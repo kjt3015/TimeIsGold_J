@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'History.css' %}">
+</head>
+<body>
+    <!--메인 컨테이너-->
+    <section class="main_container main_container_bm_1 main_container_t_1 main_container_l_1 main_container_1">
+        <!--큰 카테고리 박스-->
+        <div class="category_box category_box_bm_1 category_box_t_1 category_box_l_1 category_box_1">
+
+            <div class="gradient"></div>
+            <!--큰 카테고리 박스 내부-->
+            <article class="category_inbox">
+                <div class="main_catnamebox">
+                    <h1 class="main_catname">공부</h1>
+                </div>
+                <div class="sub_catnamebox">
+                    <h2 class="sub_catname">운동</h2>
+                </div>
+                <div class="sub_catnamebox">
+                    <h2 class="sub_catname">독서</h2>
+                </div>
+                <div class="sub_catnamebox">
+                    <h2 class="sub_catname">휴식</h2>
+                </div>
+            </article>
+        </div>
+        <!--세부 카테고리 박스-->
+        <div class="dategory_box dategory_box_bm_1 dategory_box_t_1 dategory_box_l_1 dategory_box_1">
+            <!--세부 카테고리 박스 내부-->
+            <div class="dategory_inbox">
+                <!--세부 카테고리 이름박스-->
+                <div class="dategory_namebox">
+                    <div class="nonsel_name"><h2 class="subname">백엔드</h2></div>
+                    <div class="sel_name"><h2 class="mainname">인터넷 강의</h2></div>
+                    <div class="nonsel_name"><h2 class="subname">영어</h2></div>
+                    <div class="nonsel_name"><h2 class="subname">수학</h2></div>
+                </div>
+
+                <!--세부 카테고리 시간박스-->
+                <div class="dategory_timebox">
+                    <div class="total_name">
+                        <h1>총 합산 시간</h1>
+                    </div>
+                    <div class="total_time">
+                        <p>08:32:29</p>
+                    </div>
+                </div>
+
+                <!--세부 카테고리 내용박스-->
+                <div class="dategory_contentbox">
+                    <div class="content_box">
+                        <div class="name"><h3 class="nametext">시작 날짜</h3></div>
+                        <div class="contents"><p class="contentstext">2021-01-27</p></div>
+                    </div>
+                    <div class="content_box">
+                        <div class="name"><h3 class="nametext">종료 날짜</h3></div>
+                        <div class="contents"><p class="contentstext">2021-01-28</p></div>
+                    </div>
+                    <div class="content_box">
+                        <div class="name"><h3 class="nametext">총 멈춘 횟수</h3></div>
+                        <div class="contents"><p class="contentstext">5회</p></div>
+                    </div>
+                    <div class="content_box">
+                        <div class="name"><h3 class="nametext">메모</h3></div>
+                        <div class="contents"><p class="contentstext">집중저하요소 외 3개</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

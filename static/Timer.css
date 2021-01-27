@@ -1,0 +1,1812 @@
+
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+.mainpage{
+    display: block;
+    clear: both;
+    overflow: hidden;
+    background-color:blueviolet;
+    position: fixed;
+    width: 100%;
+}
+
+/*----------------------------반응형 웹 틀----------------------------*/
+.l_container{
+    float: left;
+    z-index: 500;
+}
+
+.m_container{
+    float: left;
+}
+
+.r_container{
+    float: left;
+}
+
+/*스마트폰 왼쪽 컨테이너*/
+[class*="l_smart_"]{
+    width: 100%;
+    height: 25%;
+    position: fixed;
+    top: 0;
+}
+
+/*스마트폰 중앙 컨테이너*/
+[class*="m_smart_"]{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*스마트폰 오른쪽 컨테이너*/
+[class*="r_smart_"]{
+    width: 100%;
+    height: 25%;
+    position: fixed;
+    top: 75%;
+}
+
+
+@media only screen and (min-width: 600px){
+    /*태블릿 왼쪽 상자*/
+    .l_smart_s_3{
+        width: 100%;
+        height: 30%;
+        position: fixed;
+        left: 0;        
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 왼쪽 상자*/
+    .l_smart_l_3{
+        width: 30%;
+        height: 80%;
+        position: fixed;
+        top: 10%;
+        left: 0;        
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 왼쪽 상자*/
+    .l_smart_3{
+        width: 25%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;        
+    }
+}
+
+
+
+
+@media only screen and (min-width: 600px){
+    /*태블릿 중앙 상자*/
+    .m_smart_s_6{width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*데스크탑 중앙 상자*/
+    .m_smart_6{width: 50%;
+        height: 100%;
+    }
+}
+
+
+
+@media only screen and (min-width: 600px){
+    /*태블릿 오른쪽 상자*/
+    .r_smart_s_3{width: 100%;
+        height: 30%;
+        position: fixed;
+        right: 0;
+        top: 70%;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 오른쪽 상자*/
+    .r_smart_l_3{
+        width: 30%;
+        height: 80%;
+        position: fixed;
+        right: 0;
+        top: 10%;     
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 오른쪽 상자*/
+    .r_smart_3{width: 25%;
+        height: 100%;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+}
+
+/*--------------------------------------------------------------------*/
+
+
+
+
+/*------------------------왼쪽 컨테이너 내부------------------------*/
+
+.l_box_{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 10%;
+    bottom: 10%;
+}
+
+/*----------------------------------------------------------------*/
+
+/*------------------------중앙 컨테이너 내부------------------------*/
+
+.m_box_{
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 5%;
+    bottom: 5%;
+}
+
+/*----------------------------------------------------------------*/
+
+/*------------------------오른쪽 컨테이너 내부------------------------*/
+
+.r_box_{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 10%;
+    bottom: 10%;
+}
+
+/*----------------------------------------------------------------*/
+
+
+
+/*-------------------------왼쪽 박스 내부-------------------------*/
+
+.l_article{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*-------------------------프로필 컨테이너-------------------------*/
+.l_img{
+    width: 80%;
+    height: 90%;
+    margin: 0;
+    position: relative;
+    left: 10%;
+    top: 5%;
+    right: 10%;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+/*----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------*/
+
+/*-------------------------중앙 박스 내부-------------------------*/
+
+.m_article{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.m_img{
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 500;
+}
+
+/*잠금 버튼*/
+.lock_button{
+    border-radius: 50%;
+    background-color: #e6e6e6;
+    position: absolute;
+    top: 17.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*스마트폰 잠금 버튼*/
+[class*="lock_button_"]{
+    width: 35px;
+    height: 35px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 잠금 버튼*/
+    .lock_button_bm_1{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 잠금 버튼*/
+    .lock_button_s_1{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 잠금 버튼*/
+    .lock_button_l_1{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 잠금 버튼*/
+    .lock_button_1{
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/*--------*/
+.lock_head{
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lock_body{
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*--------*/
+
+/*스마트폰 중앙 타이머*/
+[class*="m_smartimg_"]{
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 중앙 타이머*/
+    .m_smartimg_s_1{
+        width: 400px;
+        height: 400px;
+        border-radius: 200px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 중앙 타이머*/
+    .m_smartimg_l_1{
+        width: 400px;
+        height: 400px;
+        border-radius: 250px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 중앙 타이머*/
+    .m_smartimg_1{
+        width: 700px;
+        height: 700px;
+        border-radius: 375px;
+    }
+}
+
+/*종료 버튼 테두리*/
+.end_button{
+    border-radius: 50%;
+    background-color: #ff3333;
+    position: absolute;
+    top: 87.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3000;
+    cursor: pointer;
+}
+
+/*스마트폰 종료 버튼 테두리*/
+[class*="end_button_"]{
+    width: 40px;
+    height: 40px;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 종료 버튼 테두리*/
+    .end_button_s_1{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 종료 버튼 테두리*/
+    .end_button_l_1{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 종료 버튼 테두리*/
+    .end_button_1{
+        width: 85px;
+        height: 85px;
+    }
+}
+
+/*종료버튼 공백*/
+.end_button_blank{
+    background-color: #fff;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*----------------*/
+
+/*종료 버튼*/
+.end_in_button{
+    background-color: #ff3333;
+    width: 92.5%;
+    height: 92.5%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*종료 버튼 텍스트*/
+.end_button_text{
+    width: 100%;
+    height: auto;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+}
+
+/*스마트폰 종료 버튼 텍스트*/
+[class*="end_button_text_"]{
+    font-size: 8px;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 종료 버튼 텍스트*/
+    .end_button_text_s_1{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 종료 버튼 텍스트*/
+    .end_button_text_l_1{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 종료 버튼 텍스트*/
+    .end_button_text_1{
+        font-size: 18px;
+    }
+}
+
+/*----------------------------------------------------------------*/
+
+/*-------------------------오른쪽 박스 내부-------------------------*/
+
+.r_article{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+/*----------------------------------------------------------------*/
+
+/*-------------------------오른쪽 박스 내부 레이아웃-------------------------*/
+
+.r_imgbox{
+    width: 80%;
+    height: 90%;
+    margin: 0;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    right: 10%;
+}
+/*----------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------위쪽 메모창------------------------------------------------------------------------------*/
+.r_img1{
+    margin: 0;
+    position: absolute;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+/*스마트폰 메모창*/
+[class*="r_img1_"]{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 메모창*/
+    .r_img1_s_1{
+        width: 45%;
+        height: 100%;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 메모창*/
+    .r_img1_l_1{
+        width: 100%;
+        height: 40%;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 메모창*/
+    .r_img1_1{
+        width: 100%;
+        height: 40%;
+        display: block;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------아래쪽 오늘날짜창------------------------------------------------------------------------------*/
+.r_img2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+/*스마트폰 오늘날짜창*/
+[class*="r_img2_"]{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 오늘날짜창*/
+    .r_img2_s_1{
+        position: absolute;
+        top: 0;
+        left: 55%;
+        width: 45%;
+        height: 100%;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 오늘날짜창*/
+    .r_img2_l_1{
+        position: absolute;
+        top: 60%;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 오늘날짜창*/
+    .r_img2_1{
+        position: absolute;
+        top: 60%;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        display: block;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------*/
+
+
+/*----------------------왼쪽 상단 박스 내부----------------------*/
+
+.profile_inline{
+    list-style: none;
+    display: inline-block;
+}
+
+/*----------------------------------------프로필 박스----------------------------------------*/
+
+.profile_box{
+    position: relative;
+    float: left;
+}
+
+/*스마트폰 프로필 박스*/
+[class*="m_smartpro_"]{
+    width: 33%;
+    height: 100%;
+}
+
+
+@media only screen and (min-width: 600px){
+    /*태블릿 프로필 박스*/
+    .m_smartpro_s_1{
+        width: 33%;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 프로필 박스*/
+    .m_smartpro_l_1{
+        width: 100%;
+        height: 33%;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 프로필 박스*/
+    .m_smartpro_1{
+        width: 100%;
+        height: 33%;
+    }
+}
+/*-----------------------------------------------------------------------------------------*/
+
+/*프로필 박스 내부 레이아웃*/
+
+.profile_inbox{
+    width: 70%;
+    height: 80%;
+    position: relative;
+    left: 15%;
+    top: 10%;
+}
+
+/*-------------------------*/
+
+/*프로필 박스 내부*/
+
+.profile_image{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    float: left;
+}
+
+/*-------------------------*/
+
+/*-----유저사진-----*/
+.user_image{
+    object-fit: cover;
+    position: absolute;
+    border-radius: 50%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*스마트폰 유저 이미지*/
+[class*="user_image_"]{
+    width: 44px;
+}
+
+@media only screen and (min-width: 420px){
+    /*큰 스마트폰 유저 이미지*/
+    .user_image_bm_1{
+        width:56px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 유저 이미지*/
+    .user_image_s_1{
+        width:85px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 유저 이미지*/
+    .user_image_l_1{
+        width:85px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 유저 이미지*/
+    .user_image_1{
+        width:120px;
+    }
+}
+
+/*-------------------*/
+
+/*프로필 이미지박스*/
+.profile_imagebox{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*스마트폰 프로필 박스*/
+[class*="m_smartproimg_"]{
+    width:44px;
+    height: 44px;
+    border-radius: 22px;
+}
+
+@media only screen and (min-width: 420px){
+    /*큰 스마트폰 프로필 박스*/
+    .m_smartproimg_bm_1{
+        width:56px;
+        height: 56px;
+        border-radius: 28px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 프로필 박스*/
+    .m_smartproimg_s_1{
+        width:85px;
+        height: 85px;
+        border-radius: 35px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 프로필 박스*/
+    .m_smartproimg_l_1{
+        width:85px;
+        height: 85px;
+        border-radius: 55px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 프로필 박스*/
+    .m_smartproimg_1{
+        width:120px;
+        height: 120px;
+        border-radius: 60px;
+    }
+}
+/*---------------*/
+
+/*-------유저 네임 박스-------*/
+.profile_name{
+    width: 100%;
+    height: 20%;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+/*유저이름*/
+.user_name{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: #333333;
+    font-weight: 900;
+}
+
+[class*="us_name_"]{
+    font-size: 8px;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 유저이름*/
+    .us_name_s_1{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /* 노트북 유저이름*/
+    .us_name_l_1{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /* 데스크탑 유저이름*/
+    .us_name_1{
+        font-size: 16px;
+    }
+}
+
+/*-------*/
+
+/*---------------------*/
+
+/*------------------------------------------------------------왼쪽 컨테이너 라인------------------------------------------------------------*/
+.l_line{
+    position: absolute;
+
+}
+
+/*스마트폰 왼쪽 라인*/
+[class*="l_line_"]{
+    top: 10%;
+    left: 33%;
+    height: 80%;
+    border-right: 1px solid #b3b3b3;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 왼쪽 라인*/
+    .l_line_s_1{
+        top: 10%;
+        left: 33%;
+        height: 80%;
+        border-right: 1px solid #b3b3b3;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /* 데스크탑 왼쪽 라인*/
+    .l_line_1{
+        top: 33%;
+        left: 10%;
+        width: 80%;
+        height: 0;
+        border-top: 1px solid #b3b3b3;
+    }
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------목표 박스---------------------------*/
+
+.goal_box{
+
+    position: relative;
+    float: left;
+}
+
+/*스마트폰 목표 박스*/
+[class*="m_smartgoal_"]{
+    width: 67%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 목표 박스*/
+    .m_smartgoal_s_1{
+        width: 67%;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 목표 박스*/
+    .m_smartgoal_l_1{
+        width: 100%;
+        height: 67%;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 목표 박스*/
+    .m_smartgoal_1{
+        width: 100%;
+        height: 67%;
+    }
+}
+
+/*------------------------------------------------------------*/
+
+/*목표 박스 내부*/
+.goal_inbox{
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+
+/*스마트폰 목표 박스 내부*/
+[class*="m_smartgoalin_"]{
+    height: 80%;
+    top: 10%;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 데스크탑 목표 박스 내부*/
+    .m_smartgoalin_s_1{
+        height: 90%;
+        top: 5%;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*태블릿 데스크탑 목표 박스 내부*/
+    .m_smartgoalin_1{
+        height: 60%;
+        top: 20%;
+    }
+}
+
+/*----------------------------이전 목표----------------------------*/
+.previous_goal{
+    float: left;
+    position: absolute;
+    z-index: 50;
+    background-color: #999999;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/*스마트폰 이전목표 박스*/
+[class*="m_smartprevgoal_"]{
+    width: 60%;
+    height: 70%;
+    top: 15%;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 이전목표 박스*/
+    .m_smartprevgoal_s_1{
+        width: 60%;
+        height: 70%;
+        top: 15%;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 이전목표 박스*/
+    .m_smartprevgoal_l_1{
+        width: 80%;
+        height: 40%;
+        top: 0;
+        left: 10%;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 이전목표 박스*/
+    .m_smartprevgoal_1{
+        width: 80%;
+        height: 40%;
+        top: 0;
+        left: 10%;
+    }
+}
+/*------------------------------------------------------------------*/
+
+/*----------------------------현재 목표----------------------------*/
+.present_goal{
+    float: left;
+    position: absolute;
+    z-index: 100;
+    background-color: #333333;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/*스마트폰 현재목표 박스*/
+[class*="m_smartpresgoal_"]{
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 10%;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 현재목표 박스*/
+    .m_smartpresgoal_s_1{
+        width: 80%;
+        height: 100%;
+        top: 0;
+        left: 10%;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 현재목표 박스*/
+    .m_smartpresgoal_l_1{
+        width: 100%;
+        height: 80%;
+        top: 10%;
+        left: 0;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 현재목표 박스*/
+    .m_smartpresgoal_1{
+        width: 100%;
+        height: 80%;
+        top: 10%;
+        left: 0;
+    }
+}
+
+/*현재 목표 박스 내부 텍스트*/
+
+/*목표 제목 텍스트*/
+.goalname_text{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: lighter;
+}
+
+/*스마트폰 제목 텍스트*/
+[class*="nametext_"]{
+    font-size: 8px;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 제목 텍스트*/
+    .nametext_s_1{
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 제목 텍스트*/
+    .nametext_l_1{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 제목 텍스트*/
+    .nametext_1{
+        font-size: 18px;
+    }
+}
+/*--------------*/
+
+/*목표 수정가능한 내용 텍스트*/
+
+.goalmodcon_text{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bolder;
+    background: none;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+/*스마트폰 수정가능한 내용 텍스트*/
+[class*="modcontext_"]{
+    font-size: 10px;
+
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 수정가능한 내용 텍스트*/
+    .modcontext_s_1{
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 수정가능한 내용 텍스트*/
+    .modcontext_l_1{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 수정가능한 내용 텍스트*/
+    .modcontext_1{
+        font-size: 20px;
+    }
+}
+
+/*--------------*/
+
+/*목표 내용 텍스트*/
+.goalcontent_text{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bolder;
+}
+
+/*스마트폰 내용 텍스트*/
+[class*="contenttext_"]{
+    font-size: 10px;
+
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 내용 텍스트*/
+    .contenttext_s_1{
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 내용 텍스트*/
+    .contenttext_l_1{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 내용 텍스트*/
+    .contenttext_1{
+        font-size: 20px;
+    }
+}
+/*--------------*/
+
+/*-------------------------*/
+
+/*목표 이름 박스*/
+.goal_name_box{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30%;
+    width: 100%;
+}
+
+/*목표 이름 박스 내부 레이아웃*/
+.goal_name_inbox1{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 100%;
+    padding: 2.5%;
+}
+
+.goal_name_inbox2{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 100%;
+    padding: 2.5%;
+}
+/*----------------------------*/
+
+/*------------*/
+
+/*목표 시간 박스*/
+.target_time_box{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30%;
+    width: 100%;
+}
+/*목표 시간 박스 내부 레이아웃*/
+.target_time_inbox1{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 100%;
+    padding: 2.5%;
+}
+
+.target_time_inbox2{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 100%;
+    padding: 2.5%;
+}
+/*----------------------------*/
+
+
+/*------------*/
+
+
+/*------------------------*/
+
+
+
+
+/*------------------------------------------------------------------*/
+
+/*----------------------------다음 목표----------------------------*/
+.next_goal{
+    width: 60%;
+    height: 70%;
+    float: left;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    z-index: 75;
+    background-color: #999999;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/*스마트폰 다음목표 박스*/
+[class*="m_smartnextgoal_"]{
+    width: 60%;
+    height: 70%;
+    top: 15%;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 다음목표 박스*/
+    .m_smartnextgoal_s_1{
+        width: 60%;
+        height: 70%;
+        top: 15%;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 다음목표 박스*/
+    .m_smartnextgoal_l_1{
+        width: 80%;
+        height: 40%;
+        top: 60%;
+        left: 10%;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 다음목표 박스*/
+    .m_smartnextgoal_1{
+        width: 80%;
+        height: 40%;
+        top: 60%;
+        left: 10%;
+    }
+}
+/*------------------------------------------------------------------*/
+
+/*------------------------------------------------------타이머------------------------------------------------------*/
+
+/*메인 타이머*/
+.maintimer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333333;
+    font-weight: 800;
+    z-index: 1500;
+}
+
+/*스마트폰 타이머*/
+[class*="m_smarttimer_"]{
+    font-size: 40px;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 타이머*/
+    .m_smarttimer_s_1{
+        font-size: 60px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 타이머*/
+    .m_smarttimer_l_1{
+        font-size: 60px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 타이머*/
+    .m_smarttimer_1{
+        font-size: 120px;
+    }
+}
+
+/*----------*/
+/*타이머 파트*/
+.timer_part{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333333;
+    font-weight: 600;
+}
+
+/*스마트폰 타이머 파트*/
+[class*="m_smartpart_"]{
+    font-size: 16px;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 타이머 파트*/
+    .m_smartpart_s_1{
+        font-size: 28px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 타이머 파트*/
+    .m_smartpart_l_1{
+        font-size: 28px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 타이머 파트*/
+    .m_smartpart_1{
+        font-size: 44px;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------메모 속성------------------------------------------------------*/
+
+.memonamebox{
+    width: 85%;
+    height: 70%;
+    position: absolute;
+    top: 10%;
+    left: 7.5%;
+}
+
+
+.memoname{
+    font-weight: 900;
+    color: #333333;
+}
+/*스마트폰 메모이름*/
+[class*="memoname_"]{
+    font-size: 14px;
+}
+
+
+@media only screen and (min-width: 600px){
+    /*태블릿 메모이름*/
+    .memoname_s_1{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 메모이름*/
+    .memoname_l_1{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 메모이름*/
+    .memoname_1{
+        font-size: 20px;
+    }
+}
+
+/*textarea 속성*/
+.memo{
+    width: 85%;
+    height: 70%;
+    position: absolute;
+    top: 25%;
+    left: 7.5%;
+    border: 0;
+    font-weight: bold;
+    word-break: break-all;
+    resize: none;
+    margin: 0 auto;
+    text-align: justify;
+    padding-left: 2px;
+    color: #333333;
+    background: none;
+    outline: none;
+}
+/*------------*/
+
+/*스마트폰 메모*/
+[class*="memo_"]{
+    font-size: 10px;
+    line-height: 16px;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 메모*/
+    .memo_s_1{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 메모*/
+    .memo_l_1{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 메모*/
+    .memo_1{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+/*---------------*/
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------오늘날짜 박스 내부--------------------------------------------------*/
+
+/*오늘 날짜 컨테이너*/
+.todaycon{
+    width: 85%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 7.5%;
+    border: 0;
+    margin: 0 auto;
+}
+/*--------*/
+
+/*오늘 날짜 박스*/
+.today_datebox{
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    border-bottom: 1px solid #808080;
+}
+
+/*오늘 날짜*/
+.today_date{
+    color: #333333;
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/*스마트폰 오늘 날짜*/
+[class*="today_date_"]{
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 오늘 날짜*/
+    .today_date_bm_1{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 오늘 날짜*/
+    .today_date_s_1{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 오늘 날짜*/
+    .today_date_l_1{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 오늘 날짜*/
+    .today_date_1{
+        font-size: 20px;
+    }
+}
+
+/*--------*/
+
+/*세부 목표 박스*/
+.today_detailbox{
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 15%;
+}
+/*--------*/
+
+/*세부 목표*/
+.today_detail{
+    color: #808080;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/*스마트폰 세부 목표*/
+[class*="today_detail_"]{
+    font-size: 8px;
+    display: none;
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 세부 목표*/
+    .today_detail_s_1{
+        font-size: 10px;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 세부 목표*/
+    .today_detail_l_1{
+        font-size: 8px;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 세부 목표*/
+    .today_detail_1{
+        font-size: 12px;
+        display: block;
+    }
+}
+
+/*--------*/
+
+/*세부 목표 리스트 박스*/
+.detail_listbox{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+}
+/*--------*/
+
+/*세부 목표 리스트*/
+.detail_list{
+    width: 100%;
+    height: 100%;
+    color: #333333;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    text-align: center;
+    resize: none;
+    outline: none;
+}
+
+/*스마트폰 세부 목표 리스트*/
+[class*="detail_list_"]{
+    font-size: 8px;
+    line-height: 16px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 세부 목표 리스트*/
+    .detail_list_bm_1{
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 세부 목표 리스트*/
+    .detail_list_s_1{
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 세부 목표 리스트*/
+    .detail_list_l_1{
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 세부 목표 리스트*/
+    .detail_list_1{
+        font-size: 16px;
+        line-height: 32px;
+    }
+}
+
+/*--------*/
+
+/*평균 박스*/
+.averagebox{
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    top: 75%;
+    background-color: #808080;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*--------*/
+
+/*총 작업시간 박스*/
+.l_averagebox{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+/*평균 박스 텍스트*/
+
+/*제목 텍스트*/
+.total_name{
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: lighter;
+}
+
+/*스마트폰 제목 텍스트*/
+[class*="total_name_"]{
+    font-size: 8px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 제목 텍스트*/
+    .total_name_bm_1{
+        font-size: 8px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 제목 텍스트*/
+    .total_name_s_1{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 제목 텍스트*/
+    .total_name_l_1{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 제목 텍스트*/
+    .total_name_1{
+        font-size: 14px;
+    }
+}
+
+/*--------*/
+
+/*시간 텍스트*/
+.total_time{
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+}
+
+/*스마트폰 시간 텍스트*/
+[class*="total_time_"]{
+    font-size: 8px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 시간 텍스트*/
+    .total_time_bm_1{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    /*태블릿 시간 텍스트*/
+    .total_time_s_1{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*노트북 시간 텍스트*/
+    .total_time_l_1{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 시간 텍스트*/
+    .total_time_1{
+        font-size: 18px;
+    }
+}
+
+/*--------*/
+
+/*----------------*/
+
+/*총 휴식시간 박스*/
+.r_averagebox{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+}
+
+/*----------------*/
+
+/*--------*/
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+
+/*기능구현 파트*/
+
+/*타이머 버튼*/
+#startStop{
+    border: none;
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    outline: none;
+    overflow: hidden;
+}
+
+/*타이머 버튼 효과*/
+
+span{
+    position: absolute;
+    background: #e6e6e6;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+    z-index: 2000;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        width: 0%;
+        height: 0%;
+        opacity: 0.1;
+    }
+    100%
+    {
+        width: 400%;
+        height: 400%;
+        opacity: 0;
+    }
+}
+
+/*---------------*/
+
+/*잠금 버튼*/
+#lockbutton{
+    z-index: 2500;
+}
+
+#lockbutton:hover .lock_head{
+    top: 45%;
+}
+
+#lockbutton:hover .lock_body{
+    top: 55%;
+}
+
+.lock_cover{
+    top: 50%;
+    width: 100%;
+    height: 100%;    
+    background-color:rgba(230, 230, 230, 0.5);
+    border-radius: 50%;
+    z-index: 3500;
+    display: none;
+}
+/*---------*/
+
+#jgrid{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+
+option{
+    text-align: center;
+}
+
+
+.logout_button{
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 15%;
+    border-radius: 1000px;
+}

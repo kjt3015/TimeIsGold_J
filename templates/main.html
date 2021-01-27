@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeIsGold</title>
+
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+
+<body>
+    <!--메인 컨테이너-->
+    <section class="main_container main_container_bm_1 main_container_t_1 main_container_l_1 main_container_1">
+        <!--이미지 박스-->
+        <div class="img_box img_box_bm_1 img_box_t_1 img_box_l_1 img_box_1">
+            <img class="main_img" src="/static/images/loginimg.png" alt="loginimg">
+            <!--텍스트 박스-->
+            <div class="img_textbox">
+                <h1 class="img_maintext img_maintext_bm_1 img_maintext_t_1 img_maintext_l_1 img_maintext_1">TIME IS GOLD</h1>
+                <p class="img_contenttext img_contenttext_bm_1 img_contenttext_t_1 img_contenttext_l_1 img_contenttext_1">TIME-G가 여러분의 시간을 관리해드립니다.</p>
+            </div>
+        </div>
+        <!--로그인 박스-->
+        <div class="login_box login_box_bm_1 login_box_t_1 login_box_l_1 login_box_1">
+            <!--로그인 내부 박스-->
+            <div class="login_inbox login_inbox_bm_1 login_inbox_t_1 login_inbox_l_1 login_inbox_1">
+                <!--로그인 텍스트-->
+                <div class="login_textbox">
+                    <h1 class="login_text login_text_bm_1 login_text_t_1 login_text_l_1 login_text_1">로그인</h1>
+                </div>
+                <form method="post" action="{% url 'TimeIsGold:login' %}"> 
+                {% csrf_token %}
+                <!--이메일 입력 박스-->
+                <div class="login_emailbox">
+                    <!--이메일 텍스트-->
+                    <h2 class="nametext nametext_bm_1 nametext_t_1 nametext_l_1 nametext_1">아이디</h2>
+                    <!--이메일 입력창-->
+                    <input class="contenttext input_contenttext_bm_1 input_contenttext_t_1 input_contenttext_l_1 input_contenttext_1" id="username" name="username" type="text" placeholder="아이디를 입력해주세요." required>
+                </div>
+                <!--패스워드 입력 박스-->
+                <div class="login_passwordbox">
+                    <!--패스워드 텍스트-->
+                    <h2 class="nametext nametext_bm_1 nametext_t_1 nametext_l_1 nametext_1">패스워드</h2>
+                    <!--패스워드 입력창-->
+                    <input class="contenttext input_contenttext_bm_1 input_contenttext_t_1 input_contenttext_l_1 input_contenttext_1" style="color:#000" id="password" name="password" type="password" placeholder="패스워드를 입력해주세요" required>
+                </div>
+                <!--로그인과 회원가입 박스-->
+                    <!--로그인 버튼-->
+                <div class="login_logbuttonbox">
+                    <input class="loginbutton loginbutton_bm_1 loginbutton_t_1 loginbutton_l_1 loginbutton_1" type="submit" value="로그인">
+                </div>
+                </form>
+                <!--회원가입 버튼-->
+                <div class="login_signbuttonbox">
+                    <a href="{% url 'TimeIsGold:register' %}" class="signbutton signbutton_bm_1 signbutton_t_1 signbutton_l_1 signbutton_1">처음이신가요?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

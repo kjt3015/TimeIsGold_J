@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+
+    <link rel="stylesheet" href="{% static 'Timer.css' %}">
+
+    <script type="text/javascript" src="/static/timer.js"></script>
+</head>
+
+<body onLoad="goforit()">
+    <div class="mainpage">
+
+        <!--왼쪽 컨테이너-->
+        <section class="l_container l_smart_s_3 l_smart_l_3 l_smart_3">
+            <!--왼쪽 컨테이너 내부-->
+            <div class="l_box_">
+                <!--왼쪽 박스 내부-->
+                <article class="l_article">
+                    <!--프로필 컨테이너-->
+                    <div class="l_img">
+                        <!--프로필 박스-->
+                        <div class="profile_box m_smartpro_1 m_smartpro_s_1 m_smartpro_l_1">
+                            <!--프로필 박스 내부 레이아웃-->
+                            <div class="profile_inbox">
+                                <!--프로필 박스 내부-->
+                                <div class="profile_image">
+
+                                    <!--로그아웃 버튼-->
+                                    <div class="logout_button">
+                                        
+                                    </div>
+                                    <!--프로필 이미지박스-->
+                                    <div
+                                        class="profile_imagebox m_smartproimg_1 m_smartproimg_s_1 m_smartproimg_l_1 m_smartproimg_bm_1">
+                                        <!--유저사진-->
+                                        <img class="user_image user_image_bm_1 user_image_s_1 user_image_l_1 user_image_1"
+                                            src="/static/images/profileimg.jpg" alt="profile">
+                                    </div>
+                                </div>
+                                <!--유저 네임 박스-->
+                                <div class="profile_name">
+                                    <h1 class="user_name us_name_1 us_name_s_1 us_name_l_1">손원재</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!--프로필/목표 박스 구분 선-->
+                        <div class="l_line l_line_s_1 l_line_1"></div>
+
+                        <!--목표 박스-->
+                        <div class="goal_box m_smartgoal_1 m_smartgoal_s_1 m_smartgoal_l_1">
+                            <!--목표 박스 내부-->
+                            <div class="goal_inbox m_smartgoalin_s_1 m_smartgoalin_1">
+                                <!--이전 목표-->
+                                <div class="previous_goal m_smartprevgoal_1 m_smartprevgoal_s_1 m_smartprevgoal_l_1">
+                                </div>
+
+                                <!--현재 목표-->
+                                <div style="display: grid; grid-template-rows: 1fr 1fr;"
+                                    class="present_goal m_smartpresgoal_1 m_smartpresgoal_s_1 m_smartpresgoal_l_1">
+                                    <div style="margin-top: 30px; ">
+                                        <h3>카테고리 선택</h3>
+                                        <select name="do" id="" style="width: 100px; height: 25px;">
+                                            <option value="study">공 부</option>
+                                            <option value="exercise">운 동</option>
+                                            <option value="reading">독 서</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <h3>목표를 적어주세요</h3>
+                                        <input type="text" placeholder="ex) Python 공부"
+                                            style="text-align: center; width: 80%; height: 30px;">
+
+                                    </div>
+                                </div>
+                                <!--다음 목표-->
+                                <div class="next_goal m_smartnextgoal_1 m_smartnextgoal_s_1 m_smartnextgoal_l_1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!--중앙 컨테이너-->
+        <section class="m_container m_smart_s_6 m_smart_3">
+            <!--중앙 컨테이너 내부-->
+            <div class="m_box_">
+                <!--중앙 박스 내부-->
+                <article class="m_article">
+
+                    <!--스마트폰 중앙 타이머-->
+                    <div class="m_img m_smartimg_bm_1 m_smartimg_s_1 m_smartimg_l_1 m_smartimg_1">
+
+                        <!--잠금 가림막-->
+                        <div class="lock_cover" id="lockcover"></div>
+                        <!--잠금 버튼-->
+                        <div class="lock_button lock_button_bm_1 lock_button_s_1 lock_button_l_1 lock_button_1"
+                            id="lockbutton" onclick="coverNonecover()">
+
+                            <!--자물쇠 고리-->
+                            <div>
+                                <img src="/static/images/lockhead.png" alt="lockhead" class="lock_head" id="lockhead">
+                            </div>
+                            <!--자물쇠 몸통-->
+                            <div>
+                                <img src="/static/images/lockbody.png" alt="lockbody" class="lock_body" id="lockbody">
+                            </div>
+                        </div>
+
+                        <!--타이머-->
+                        <h1 class="maintimer m_smarttimer_1 m_smarttimer_s_1 m_smarttimer_l_1" id="display">00:00:00
+                        </h1>
+
+                        <a href="#" id="startStop" onclick="startStop()"></a>
+
+                        <!--파트-->
+                        <button style="position: absolute; bottom: 30%; right: 43%; height: 60px; width: 100px; z-index: 5000;" >
+                        <a href="{% url 'History:index' %}">HISTORY</a>
+                        </button>
+                        
+                        <!--종료 버튼 테두리-->
+                        <div class="end_button end_button_bm_1 end_button_s_1 end_button_l_1 end_button_1"
+                            id="endbutton" onclick="end()">
+                            <div class="end_button_blank"></div>
+                            <!--종료 버튼-->
+                            <div
+                                class="end_in_button end_in_button_bm_1 end_in_button_s_1 end_in_button_l_1 end_in_button_1">
+                                <h1
+                                    class="end_button_text end_button_text_bm_1 end_button_text_s_1 end_button_text_l_1 end_button_text_1">
+                                    END</h1>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!--오른쪽 컨테이너-->
+        <section class="r_container r_smart_s_3 r_smart_l_3 r_smart_3">
+            <!--오른쪽 컨테이너 내부-->
+            <div class="r_box_">
+                <!--오른쪽 박스 내부-->
+                <article class="r_article">
+                    <!--오른쪽 박스 내부 레이아웃-->
+                    <div class="r_imgbox">
+                        <!--위쪽 메모창-->
+                        <div id="jgrid" class="r_img1 r_img1_s_1 r_img1_l_1 r_img1_1">
+
+                            <!--오늘 날짜 박스-->
+                            <div style="padding: 20px 20px; padding-bottom: 0px;">
+                                <h3>Time</h3>
+                                <div id="clock"></div>
+                            </div>
+                            <div style="text-align: center; padding: 20px 20px;">
+                                <img src="images/sun.jpg" style="height:100px;">
+                                <div style="padding-top: 10px;">서울<br> 60˚C</div>
+                            </div>
+
+                        </div>
+
+                        <!--오늘날짜창-->
+                        <div class="r_img2 r_img2_s_1 r_img2_l_1 r_img2_1">
+                            <!--메모 이름-->
+                            <div class="memonamebox">
+                                <h1 class="memoname memoname_s_1 memoname_l_1 memoname_1">MEMO</h1>
+                            </div>
+                            <!--메모-->
+                            <textarea class="memo memo_s_1 memo_l_1 memo_1" placeholder="메모작성"></textarea>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

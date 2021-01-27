@@ -1,0 +1,420 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+/*-----------------------------------------------메인 컨테이너-----------------------------------------------*/
+.main_container{
+    width: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.1);
+}
+
+[class*="main_container_"]{
+    height: 80%;
+    border-radius: 40px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 메인 컨테이너*/
+    .main_container_bm_1{
+        height: 85%;
+        border-radius: 40px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 메인 컨테이너*/
+    .main_container_t_1{
+        height: 80%;
+        border-radius: 60px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 메인 컨테이너*/
+    .main_container_l_1{
+        height: 80%;
+        border-radius: 60px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 메인 컨테이너*/
+    .main_container_l_1{
+        height: 80%;
+        border-radius: 80px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------큰 카테고리 박스-----------------------------------------------*/
+.category_box{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    background-color: #666666;
+}
+
+[class*="category_box_"]{
+    width: 100%;
+    height: 30%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 큰 카테고리 박스*/
+    .category_box_bm_1{
+        width: 100%;
+        height: 30%;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 큰 카테고리 박스*/
+    .category_box_t_1{
+        width: 100%;
+        height: 30%;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 큰 카테고리 박스*/
+    .category_box_l_1{
+        width: 27.5%;
+        height: 100%;
+        border-top-left-radius: 60px;
+        border-bottom-left-radius: 60px;
+        border-top-right-radius: 0px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 큰 카테고리 박스*/
+    .category_box_1{
+        width: 27.5%;
+        height: 100%;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 80px;
+        border-top-right-radius: 0px;
+    }
+}
+
+/*그라디언트*/
+.gradient{
+    background-image: linear-gradient(90deg, #666666 90%, #4d4d4d);
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+/*--------*/
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------세부 카테고리 박스-----------------------------------------------*/
+.dategory_box{
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+[class*="dategory_box_"]{
+    width: 100%;
+    height: 70%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 세부 카테고리 박스*/
+    .dategory_box_bm_1{
+        width: 100%;
+        height: 70%;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 세부 카테고리 박스*/
+    .dategory_box_t_1{
+        width: 100%;
+        height: 70%;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 세부 카테고리 박스*/
+    .dategory_box_l_1{
+        width: 72.5%;
+        height: 100%;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 60px;
+        border-top-right-radius: 60px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 세부 카테고리 박스*/
+    .dategory_box_1{
+        width: 72.5%;
+        height: 100%;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 80px;
+        border-top-right-radius: 80px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------큰 카테고리 박스 내부-----------------------------------------------*/
+
+.category_inbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 80%;
+    z-index: 100;
+}
+
+/*메인 카테고리 이름 박스*/
+.main_catnamebox{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    height: 15%;
+    background-color: #b3b3b3;
+    border-radius: 5000px;
+    margin-bottom: 30px;
+}
+/*-----------------*/
+
+/*메인 카테고리 이름 */
+.main_catname{
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+}
+/*-----------------*/
+
+/*서브 카테고리 이름 박스*/
+.sub_catnamebox{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+    height: 10%;
+    background-color: #808080;
+    border-radius: 5000px;
+    margin-bottom: 20px;
+}
+/*-----------------*/
+
+/*서브 카테고리 이름 */
+.sub_catname{
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 24px;
+    font-weight: 900;
+    color: white;
+}
+/*-----------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------세부 카테고리 박스 내부-----------------------------------------------*/
+
+.dategory_inbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+    z-index: 100;
+}
+
+/*세부 카테고리 이름 박스*/
+.dategory_namebox{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 12.5%;
+}
+
+/*이름 박스*/
+.sel_name{
+    float: left;
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: auto;
+    height: 80%;
+    background-color: #333333;
+    border-radius: 5000px;
+    margin-right: 1.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+}
+
+.nonsel_name{
+    float: left;
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: auto;
+    height: 60%;
+    background-color: #e6e6e6;
+    border-radius: 5000px;
+    margin-right: 1.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 14px;
+    font-weight: 900;
+    color: #1a1a1a;
+}
+
+/*이름*/
+.mainname{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.subname{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+/*--------------------*/
+
+
+/*세부 카테고리 시간 박스*/
+.dategory_timebox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 50%;
+}
+
+/*총 합산 시간*/
+.total_name{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: 1000;
+    color: #1a1a1a;
+}
+
+.total_time{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 125px;
+    font-weight: 900;
+    color: #1a1a1a;
+
+}
+/*-----------*/
+/*--------------------*/
+
+/*세부 카테고리 내용 박스*/
+.dategory_contentbox{
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    height: 20%;
+}
+
+/*세부 카테고리 내용*/
+.content_box{
+    float: left;
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 21%;
+    height: 80%;
+    margin-right: 2%;
+    margin-left: 2%;
+    background-color: #f7f7f7;
+    border-radius: 30px;
+}
+
+.name{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    height: 50%;
+    border-bottom: 1px solid #333333;
+    color: #333333;
+}
+
+.contents{
+    width: 80%;
+    height: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #333333;
+}
+
+.nametext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.contentstext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 18px;
+    font-weight: normal;
+}
+/*--------------------*/
+/*------------------------------------------------------------------------------------------------------------*/

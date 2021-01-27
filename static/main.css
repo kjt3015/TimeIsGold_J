@@ -1,0 +1,580 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NanumSquare', sans-serif;
+}
+/*-----------------------------------------------메인 컨테이너-----------------------------------------------*/
+.main_container{
+    width: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.1);
+}
+
+[class*="main_container_"]{
+    height: 80%;
+    border-radius: 40px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 메인 컨테이너*/
+    .main_container_bm_1{
+        height: 85%;
+        border-radius: 40px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 메인 컨테이너*/
+    .main_container_t_1{
+        height: 80%;
+        border-radius: 60px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 메인 컨테이너*/
+    .main_container_l_1{
+        height: 80%;
+        border-radius: 60px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 메인 컨테이너*/
+    .main_container_l_1{
+        height: 80%;
+        border-radius: 80px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------이미지 박스-----------------------------------------------*/
+.img_box{
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+[class*="img_box_"]{
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 메인 컨테이너*/
+    .img_box_bm_1{
+        width: 100%;
+        height: 50%;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 메인 컨테이너*/
+    .img_box_t_1{
+        width: 100%;
+        height: 60%;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 메인 컨테이너*/
+    .img_box_l_1{
+        width: 67%;
+        height: 100%;
+        border-top-left-radius: 60px;
+        border-bottom-left-radius: 60px;
+        border-top-right-radius: 0px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 메인 컨테이너*/
+    .img_box_1{
+        width: 67%;
+        height: 100%;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 80px;
+        border-top-right-radius: 0px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+.main_img{
+    background-size: cover;
+    height: 120%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    z-index: -20;
+}
+
+.img_textbox{
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    left: 7.5%;
+}
+
+/*--------------------------------------------------이미지 메인 텍스트-------------------------------------------------*/
+.img_maintext{
+    color: #1a1a1a;
+}
+
+[class*="img_maintext_"]{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 메인 텍스트*/
+    .img_maintext_bm_1{
+        font-size: 26px;
+        font-weight: 900;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 메인 텍스트*/
+    .img_maintext_t_1{
+        font-size: 52px;
+        font-weight: 900;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 메인 텍스트*/
+    .img_maintext_l_1{
+        font-size: 52px;
+        font-weight: 900;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 메인 텍스트*/
+    .img_maintext_1{
+        font-size: 60px;
+        font-weight: 900;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------이미지 내용 텍스트-------------------------------------------------*/
+.img_contenttext{
+    color: #1a1a1a;
+}
+
+[class*="img_contenttext_"]{
+    font-size: 8px;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 내용 텍스트*/
+    .img_contenttext_bm_1{
+        font-size: 10px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 내용 텍스트*/
+    .img_contenttext_t_1{
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 내용 텍스트*/
+    .img_contenttext_l_1{
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 내용 텍스트*/
+    .img_contenttext_1{
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------로그인 박스-----------------------------------------------*/
+.login_box{
+    position: relative;
+    float: left;
+}
+
+[class*="login_box_"]{
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 로그인 박스*/
+    .login_box_bm_1{
+        width: 100%;
+        height: 50%;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 로그인 박스*/
+    .login_box_t_1{
+        width: 100%;
+        height: 40%;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 로그인 박스*/
+    .login_box_l_1{
+        width: 33%;
+        height: 100%;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 60px;
+        border-top-right-radius: 60px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 로그인 박스*/
+    .login_box_1{
+        width: 33%;
+        height: 100%;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 80px;
+        border-top-right-radius: 80px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------로그인 박스 내부-----------------------------------------------*/
+.login_inbox{
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+[class*="login_inbox_"]{
+    width: 80%;
+    height: 90%;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 로그인 박스*/
+    .login_inbox_bm_1{
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 로그인 박스*/
+    .login_inbox_t_1{
+        width: 60%;
+        height: 90%;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 로그인 박스*/
+    .login_inbox_l_1{
+        width: 70%;
+        height: 45%;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 로그인 박스*/
+    .login_inbox_1{
+        width: 60%;
+        height: 60%;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+.login_textbox{
+    position: absolute;
+    top: 0;
+    height: 20%;
+}
+
+/*-----------------------------------------------로그인 텍스트-----------------------------------------------*/
+.login_text{
+    color:#333333;
+    font-weight: 800;
+}
+
+[class*="login_text_"]{
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 로그인 텍스트*/
+    .login_text_bm_1{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 로그인 텍스트*/
+    .login_text_t_1{
+        font-size: 32px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 로그인 텍스트*/
+    .login_text_l_1{
+        font-size: 28px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 로그인 텍스트*/
+    .login_text_1{
+        font-size: 40px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+.login_emailbox{
+    width: 100%;
+    position: absolute;
+    top: 22.5%;
+    height: 20%;
+}
+
+.login_passwordbox{
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    height: 20%;
+}
+
+.login_logbuttonbox{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 15%;
+}
+
+/*-----------------------------------------------로그인 버튼-----------------------------------------------*/
+.loginbutton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333333;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 1000px;
+    cursor: pointer;
+    outline: none;
+}
+
+[class*="loginbutton_"]{
+    font-size: 14px;
+    width: 35%;
+    height: 80%;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 로그인 버튼*/
+    .loginbutton_bm_1{
+        font-size: 14px;
+        width: 35%;
+        height: 80%;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 로그인 로그인 버튼*/
+    .loginbutton_t_1{
+        font-size: 23px;
+        width: 35%;
+        height: 90%;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 로그인 로그인 버튼*/
+    .loginbutton_l_1{
+        font-size: 20px;
+        width: 50%;
+        height: 80%;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 로그인 버튼*/
+    .loginbutton_1{
+        font-size: 22px;
+        width: 50%;
+        height: 80%;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+.login_signbuttonbox{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 10%;
+}
+
+/*-----------------------------------------------회원가입 버튼-----------------------------------------------*/
+.signbutton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 90%;
+    color: #b6b6b6;
+    font-weight: 700;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+[class*="signbutton_"]{
+    font-size: 10px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 회원가입 버튼*/
+    .signbutton_bm_1{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 로그인 회원가입 버튼*/
+    .signbutton_t_1{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 로그인 회원가입 버튼*/
+    .signbutton_l_1{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 로그인 텍스트*/
+    .signbutton_1{
+        font-size: 16px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------이름 텍스트-----------------------------------------------*/
+.nametext{
+    font-weight: bold;
+    color: #b3b3b3;
+}
+
+[class*="nametext_"]{
+    font-size: 12px;
+    padding-bottom: 2.5%;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 이름 텍스트*/
+    .nametext_bm_1{
+        font-size: 14px;
+        padding-bottom: 2.5%;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 로그인 이름 텍스트*/
+    .nametext_t_1{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 로그인 이름 텍스트*/
+    .nametext_l_1{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 로그인 텍스트*/
+    .nametext_1{
+        padding-bottom: 5%;
+        font-size: 16px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------입력 내용 텍스트-----------------------------------------------*/
+.contenttext{
+    width: 100%;
+    font-weight: bold;
+    color:#333333;
+    border: 0;
+    border-bottom: 1px solid #b3b3b3;
+    padding-bottom: 2%;
+}
+
+[class*="input_contenttext_"]{
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 321px){
+    /*큰 스마트폰 입력 내용 텍스트*/
+    .input_contenttext_bm_1{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    /*태블릿 로그인 입력 내용 텍스트*/
+    .input_contenttext_t_1{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /*노트북 로그인 입력 내용 텍스트*/
+    .input_contenttext_l_1{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    /*데스크탑 로그인 입력 내용 텍스트*/
+    .input_contenttext_1{
+        font-size: 18px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
